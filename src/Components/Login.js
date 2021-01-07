@@ -19,7 +19,6 @@ class Login extends Component {
     componentDidMount() {
         Axios.get('http://localhost:4000/login')
             .then(response => {
-                console.log(response)
                 this.setState({ logindetails: response.data });
         })
     }

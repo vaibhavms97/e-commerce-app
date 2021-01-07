@@ -1,23 +1,19 @@
 const express = require('express');
-const cors = require('cors');
 const MongoClient = require('mongodb').MongoClient;
-
-const uri = require('./config/keys');
-
-MongoClient.connect(uri, { useUnifiedTopology: true ,useNewUrlParser: true }, (err,client) =>{
-    if(err) throw err;
-    console.log('mongo')
-    const db = client.db('mall');
-})
-
+const cors = require('cors');
 
 const app = express()
-const PORT = process.env.PORT || 4000
-
+const url = 'mongodb://localhost:27017'
 
 app.use(cors())
 app.use(express.json())
+var ObjectId = require('mongodb').ObjectID
 
+MongoClient.connect(url, { useUnifiedTopology: true ,useNewUrlParser: true }, (err,client) =>{
+    if(err) throw err;
+    console.log('mongo')
+    db = client.db('mall');
+})
 
 app.get('/login',(req,res) => {
     db.collection('users').find().toArray((err,values) => {
@@ -65,12 +61,4 @@ app.post('/postProducts',(req,res) =>{
     console.log(req.body)
 })
 
-if(process.env.NODE_ENV=='production'){
-    app.use(express.static('client/build'))
-    const path = require('path')
-    app.get('*',(req,res) => {
-        res.send(path.resolve(__dirname,'client','build','index.html'))
-    })
-}
-
-app.listen(PORT, () => console.log('Your port is listening at 4000'))
+app.listen(4000, () => console.log('Your port is listening at 4000'))

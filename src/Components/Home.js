@@ -25,7 +25,11 @@ class Home extends Component {
             searchBrand: undefined,
             diplayComponents: undefined,
             name: [],
-            description: []
+            description: [],
+            filteredBrands: [],
+            filteredCategories: [],
+            uniqueBrands: [],
+            uniqueCategories: []
         }
         this.handleCart = this.handleCart.bind(this);
         this.addFilters = this.addFilters.bind(this);
@@ -58,6 +62,12 @@ class Home extends Component {
                                     }
                                 })
                         }
+                        let brands = this.state.products.map(product => product.brand);
+                        const uniqueBrands = [...new Set(brands)];
+                        this.setState({uniqueBrands: uniqueBrands})
+                        const categories = this.state.products.map(product => product.category);
+                        const uniqueCategories = [...new Set(categories)];
+                        this.setState({uniqueCategories: uniqueCategories})
                     })
             })
     }
@@ -101,6 +111,10 @@ class Home extends Component {
         this.props.dispatch({
             type: 'filterChange',
             value: true
+        })
+        this.props.dispatch({
+            type: 'currentPage',
+            pageNum: 1
         })
     }
 
@@ -184,12 +198,10 @@ class Home extends Component {
     render() {
         let products = this.filteredProducts(this.state.products);
         let shownProducts = this.shownProducts(products)
-        const productsLength = products.length
-        const brands = this.state.products.map(product => product.brand);
-        const uniqueBrands = [...new Set(brands)]
-        const categories = this.state.products.map(product => product.category);
-        const uniqueCategories = [...new Set(categories)]
-        const ratings = [5, 4, 3, 2, 1]
+        let productsLength = products.length
+        const ratings = [5, 4, 3, 2, 1];
+        let uniqueCategories = this.state.uniqueCategories;
+        let uniqueBrands = this.state.uniqueBrands;
         return (
             <div className='home'>
                 <div className='filters'>
