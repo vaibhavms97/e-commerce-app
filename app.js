@@ -9,6 +9,8 @@ app.use(cors())
 app.use(express.json())
 var ObjectId = require('mongodb').ObjectID
 
+const PORT = process.env.PORT || 4000
+
 MongoClient.connect(url, { useUnifiedTopology: true ,useNewUrlParser: true }, (err,client) =>{
     if(err) throw err;
     console.log('mongo')
@@ -65,4 +67,4 @@ app.post('/postProducts',(req,res) =>{
     console.log(req.body)
 })
 
-app.listen(4000, () => console.log('Your port is listening at 4000'))
+app.listen(PORT, () => console.log('Your port is listening at 4000'))
