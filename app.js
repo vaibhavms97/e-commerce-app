@@ -3,7 +3,7 @@ const MongoClient = require('mongodb').MongoClient;
 const cors = require('cors');
 
 const app = express()
-const url = 'mongodb://localhost:27017'
+const url = "mongodb+srv://mall:mall@cluster0.lx97d.mongodb.net/mall?retryWrites=true&w=majority"
 
 app.use(cors())
 app.use(express.json())
