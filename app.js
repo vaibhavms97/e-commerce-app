@@ -13,6 +13,10 @@ MongoClient.connect(url, { useUnifiedTopology: true ,useNewUrlParser: true }, (e
     if(err) throw err;
     console.log('mongo')
     db = client.db('mall');
+    db.collection('users').find().toArray((err,values) => {
+        if(err) throw err;
+        console.log(values);
+    })
 })
 
 app.get('/login',(req,res) => {
