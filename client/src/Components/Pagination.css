@@ -1,0 +1,50 @@
+.paginationPage{
+    display: flex;
+}
+
+.pageBar{
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.pageBar button{
+    height: 38px;
+    width: 38px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+.pageBar button:focus{
+    outline: none;
+    border: none;
+}
+
+.pageNumber{
+    background-color: rgba(65, 66, 71, 0.08);
+    border-radius: 4px;
+    color: #414247;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    height: 38px;
+    width: 38px;
+    margin: 3px;
+    cursor: pointer;
+}
+
+.currentPage{
+    background-color:#FB7B09;
+    border-radius: 4px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    height: 38px;
+    width: 38px;
+    margin: 3px;
+    cursor: pointer;
+    font-weight: 500;
+    color: #ffffff;
+}

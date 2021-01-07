@@ -1,0 +1,142 @@
+:root{
+    --color:#fb7b09;
+    --white:#ffffff;
+    --grey: #ebecf3;
+}
+
+.cartHeading{
+    padding: 10px 20px;
+    border-bottom: 1px solid #ebecf3;
+}
+
+
+.cartPage{
+    align-items: center;
+    /* font-family: 'Roboto', sans-serif; */
+}
+
+.emptyCart{
+    margin-top: 120px;
+    font-family: Roboto,Arial,sans-serif;
+    text-align: center;
+}
+
+.emptyCart img{
+    height: 162px;
+}
+
+.empty{
+    margin-top: 24px;
+    font-size: 18px;
+}
+
+.addItems{
+    margin-top: 10px;
+    font-size: 12px;
+}
+
+.emptyCart button{
+    margin-top: 20px;
+    font-weight: 400;
+    background-color: var(--color);
+    color: var(--white);
+    padding: 12px 72px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+.emptyCart button:focus{
+    outline: none;
+    border: none;
+}
+
+.inCart{
+    display: flex;
+}
+
+.cartItems{
+    width: 70%;
+    box-shadow: 0 0 5px rgba(0,0,0,0.6);
+    margin: 20px 30px;
+}
+
+.cartProduct{
+    display: flex;
+    padding: 20px 0;
+    border-bottom: 1px solid #ebecf3;
+}
+
+.cartProduct img{
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    margin: auto;
+}
+
+.image{
+    margin:0 50px;
+}
+
+
+.removeItem{
+    margin-top: 10px;
+    background-color: var(--white);
+    border: none;
+    outline: none;
+    font-weight: 500;
+}
+
+.removeItem:focus{
+    border: none;
+    outline: none;
+}
+
+.removeItem:hover{
+    color: var(--color);
+}
+
+.priceNote{
+    width: 25%;
+    height: 300px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.6);
+    margin: 20px 0;
+    top: 20px;
+    position: sticky;
+}
+
+.priceHeading{
+    padding: 10px 20px;
+    border-bottom: 1px solid #ebecf3;
+}
+
+.priceDetails{
+    padding: 10px 20px;
+    font-weight: 400;
+}
+
+.totalPrice{
+    justify-content: space-between;
+    display: flex;
+}
+
+.discountPrice{
+    justify-content: space-between;
+    display: flex;
+}
+
+.deliveryCharges{
+    justify-content: space-between;
+    display: flex;
+}
+
+.total{
+    font-weight: 500;
+    padding: 12px 10px 0px 10px;
+    margin: 0 10px;
+    justify-content: space-between;
+    display: flex;
+    border-top: 1px dashed #ebecf3;
+    border-bottom: 1px dashed #ebecf3;
+}

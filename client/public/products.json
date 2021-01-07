@@ -1,0 +1,211 @@
+[
+    {
+        "image":"https://cdn-demo.algolia.com/bestbuy-0118/8451121_sb.jpg",
+        "price":250,
+        "name":"tv",
+        "description":"super tv",
+        "rating":4,
+        "category":"tv",
+        "brand":"mi"
+    }, 
+    {
+        "image":"https://cdn-demo.algolia.com/bestbuy-0118/5065600_sb.jpg",
+        "price":250,
+        "name":"Samsung - 65 Class (64.5 Diag.) - LED - 2160p - Smart - 4K Ultra HD TV - with High Dynamic Range - Silver",
+        "description":"4K Ultra HD TV with HDR",
+        "rating":3,
+        "category":"tv",
+        "brand":"samsung"
+    },
+    {
+        "image":"https://cdn-demo.algolia.com/bestbuy-0118/5656023_sb.jpg",
+        "price":250,
+        "name":"Pixel phone",
+        "description":"super tv",
+        "rating":2,
+        "category":"mobiles",
+        "brand":"google"
+    },
+    {
+        "image":"https://cdn-demo.algolia.com/bestbuy-0118/5005506_sb.jpg",
+        "price":250,
+        "name":"I Phone",
+        "description":"super tv",
+        "rating":1,
+        "category":"mobiles",
+        "brand":"apple"
+    },
+    {
+        "image":"https://cdn-demo.algolia.com/bestbuy-0118/9768562_sb.jpg",
+        "price":250,
+        "name":"Samsung fridge",
+        "description":"super tv",
+        "rating":5,
+        "category":"refrigerator",
+        "brand":"samsung"
+    },
+    {
+        "image":"https://cdn-demo.algolia.com/bestbuy-0118/5115700_sb.jpg",
+        "price":250,
+        "name":"LG Fridge",
+        "description":"super tv",
+        "rating":4,
+        "category":"refrigerator",
+        "brand":"lg"
+    },
+    {
+        "image":"https://cdn-demo.algolia.com/bestbuy-0118/4085178_sb.jpg",
+        "price":250,
+        "name":"Boat earpods",
+        "description":"super tv",
+        "rating":3,
+        "category":"ear buds",
+        "brand":"boat"
+    },
+    {
+        "image":"https://cdn-demo.algolia.com/bestbuy-0118/5647700_sb.jpg",
+        "price":250,
+        "name":"G-Shock watch",
+        "description":"super tv",
+        "rating":2,
+        "category":"watches",
+        "brand":"gshock"
+    },
+    {
+        "image":"https://cdn-demo.algolia.com/bestbuy-0118/5477500_sb.jpg",
+        "price":250,
+        "name":"Amazon fire stick",
+        "description":"super tv",
+        "rating":4,
+        "category":"Enjoy smart access to videos, games and apps with this",
+        "brand":"amazon"
+    },
+    {
+        "image":"https://cdn-demo.algolia.com/bestbuy-0118/5588602_sb.jpg",
+        "price":250,
+        "name":"dell laptop",
+        "description":"Dell Inspiron Laptop: Get speed and performance from this 15",
+        "rating":3,
+        "category":"laptop",
+        "brand":"dell"
+    },
+    {
+        "image":"https://cdn-demo.algolia.com/bestbuy-0118/6443034_sb.jpg",
+        "price":250,
+        "name":"Apple - MacBook Air® (Latest Model) - 13.3 Display - Intel Core i5 - 8GB Memory - 128GB Flash Storage - Silver",
+        "description":"MacBook Air features up to 8GB of memory, a fifth",
+        "rating":5,
+        "category":"laptop",
+        "brand":"apple"
+    },
+    {
+        "image":"https://cdn-demo.algolia.com/bestbuy-0118/4863102_sb.jpg",
+        "price":250,
+        "name":"Sharp - 50 Class (49.5 Diag.) - LED - 1080p - Smart - HDTV Roku TV - Black",
+        "description":"Only at Best Buy Sharp LC-50LB481U LED Roku TV",
+        "rating":4,
+        "category":"tv",
+        "brand":"sharp"
+    },
+    {
+        "image":"https://cdn-demo.algolia.com/bestbuy-0118/6848136_sb.jpg",
+        "price":250,
+        "name":"Apple - EarPods™ with Remote and Mic - White",
+        "description":"Control media playback, adjust the volume and answer and end ",
+        "rating":5,
+        "category":"ear phones",
+        "brand":"apple"
+    },
+    {
+        "image":"https://cdn-demo.algolia.com/bestbuy-0118/5217300_sb.jpg",
+        "price":250,
+        "name":"Samsung - 55 Class (54.6 Diag.) - LED - 2160p - Smart - 4K Ultra HD TV - Black",
+        "description":"Enjoy movies, television and music with this Samsung LED smart",
+        "rating":4,
+        "category":"tv",
+        "brand":"samsung"
+    },
+    {
+        "image":"https://cdn-demo.algolia.com/bestbuy-0118/4822001_sb.jpg",
+        "price":250,
+        "name":"Insignia™ - 32 Class (31.5 Diag.) - LED - 720p - Smart - Roku TV - Black",
+        "description":" this 32-inch Insignia LED TV. It provides 720p resolution",
+        "rating":3,
+        "category":"tv",
+        "brand":"insignia"
+    },
+    {
+        "image":"https://cdn-demo.algolia.com/bestbuy-0118/4801900_sb.jpg",
+        "price":250,
+        "name":"Sony - 65 Class (64.5 Diag.) - 2160p - Smart - 4K Ultra HD TV with High Dynamic Range - Black",
+        "description":"This Sony 65-inch 4K HDR TV is slim enough",
+        "rating":5,
+        "category":"tv",
+        "brand":"sony"
+    },
+    {
+        "image":"https://cdn-demo.algolia.com/bestbuy-0118/4804100_sb.jpg",
+        "price":250,
+        "name":"Sony - 65 Class (64.5 Diag.) - 2160p - Smart - 4K Ultra HD TV with High Dynamic Range - Black",
+        "description":"This Sony 65-inch 4K HDR TV is slim enough",
+        "rating":5,
+        "category":"tv",
+        "brand":"sony"
+    },
+    {
+        "image":"https://cdn-demo.algolia.com/bestbuy-0118/4984900_sb.jpg",
+        "price":250,
+        "name":"Samsung Galaxy Express Prime 4G LTE with 16GB Memory Prepaid Cell Phone",
+        "description":"Text and talk with ease on this Samsung Jack smartphone",
+        "rating":3,
+        "category":"phone",
+        "brand":"samsung"
+    },
+    {
+        "image":"https://cdn-demo.algolia.com/bestbuy-0118/5191101_sb.jpg",
+        "price":250,
+        "name":"Motorola - MOTO G (4th Generation) 4G LTE with 16GB Memory Cell Phone (Unlocked) - Black",
+        "description":"this unlocked Motorola Moto G phone",
+        "rating":4,
+        "category":"phone",
+        "brand":"motorola"
+    },
+    {
+        "image":"https://cdn-demo.algolia.com/bestbuy-0118/5046702_sb.jpg",
+        "price":250,
+        "name":"LG Phoenix 2 4G LTE with 16GB Memory Prepaid Cell Phone - Black",
+        "description":"LG Phoenix 2 Prepaid Cell Phone",
+        "rating":2,
+        "category":"phone",
+        "brand":"LG"
+    },
+    {
+        "image":"https://cdn-demo.algolia.com/bestbuy-0118/5705352_sb.jpg",
+        "price":250,
+        "name":"Samsung - Galaxy S7 edge 32GB - Blue Coral (Verizon)",
+        "description":"Stay on top of your social media with this Samsung",
+        "rating":5,
+        "category":"phone",
+        "brand":"samsung"
+    },
+    {
+        "image":"https://cdn-demo.algolia.com/bestbuy-0118/5546604_sb.jpg",
+        "price":250,
+        "name":"Apple - Apple Watch Series 1 42mm Space Gray Aluminum Case Black Sport Band - Space Gray Aluminum",
+        "description":"Apple watch",
+        "rating":5,
+        "category":"watch",
+        "brand":"apple"
+    },
+    {
+        "image":"https://cdn-demo.algolia.com/bestbuy-0118/5251901_rb.jpg",
+        "price":250,
+        "name":"Asus - ZenWatch 2 WI501Q Smartwatch Gunmetal",
+        "description":"AMOLED touch screen watch is IP67-waterproof",
+        "rating":4,
+        "category":"watch",
+        "brand":"asus"
+    }
+
+   
+]

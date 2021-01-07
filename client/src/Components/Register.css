@@ -1,0 +1,79 @@
+:root{
+    --color:#fb7b09
+}
+
+.registerPage{
+    height: 100vh;
+    width: 100vw;
+    top: 0px;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.registerContainer{
+    height: 500px;
+    width: 400px;
+    position: fixed;
+    align-items: center;
+    display: flex;
+    color: white;
+    background-color: var(--color);
+    border-radius: 10px;
+}
+
+.contents{
+    margin-left: 40px;
+}
+
+.error{
+    color: red;
+    font-size: 16px;
+    text-align: center;
+}
+
+.heading{
+    text-align: center;
+}
+
+.label{
+    margin: 3px;
+}
+
+.inputdiv{
+    padding-bottom: 8px;
+}
+
+.input{
+    border-radius:5px ;
+    width: 250px;
+    border: none;
+    outline: none;
+    height: 40px;
+}
+
+.confirmPasswordinp{
+    padding-bottom: 20px;
+}
+
+.login{
+    padding-left: 15px;
+}
+
+#button{
+    width: 250px;
+    background-color: rgb(27, 27, 27);
+    color: white;
+}
+
+.closeIcon{
+    color: black;
+    bottom:220px;
+    left:340px;
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+}
+

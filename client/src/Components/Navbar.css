@@ -1,0 +1,208 @@
+:root{
+    --white:#ffffff;
+    --color:#fb7b09;
+}
+
+.navBar{
+    /* font-family: Roboto,Arial,sans-serif; */
+    height: 70px;
+    width: 98vw;
+    background-color: var(--white);
+    align-items: center;
+    justify-content: space-around;
+    display: flex;
+    color: var(--color);
+    font-size: large;
+    font-weight: 500;
+    /* position: fixed; */
+}
+
+.logo{
+    min-width:120px;
+    cursor: pointer;
+}
+
+.mallLogo{
+    height: 30px;
+    width: 30px;
+    margin:0 10px 10px 20px;
+    color: var(--color);
+}
+
+.name{
+    font-size: x-large;
+}
+
+.searchBar{
+    width: 500px;
+    padding: 0 20px;
+    display: flex;
+}
+
+.searchBar input{
+    height: 36px;
+    width: 100%;
+    border: 1px solid var(--color);
+    outline: transparent;
+    border-top-left-radius: 18px;
+    border-bottom-left-radius: 18px; 
+    padding: 10px;
+    font-weight: 300; 
+    padding-left: 20px;   
+    font-weight: 400;
+}
+
+
+.searchBar button{
+    border: none;
+    outline: none;
+    background-color: var(--color);
+    padding: 0px;
+    height: 36px;
+    width: 40px;
+    border-top-right-radius: 18px;
+    border-bottom-right-radius: 18px; 
+}
+
+.searchBar button:focus{
+    border: none;
+    outline: none;
+}
+
+.searchIcon{
+    color: var(--white);
+    font-size: x-large;
+    padding-bottom: 3px;
+    padding-right: 5px;
+
+}
+
+.navItems{
+    float: right;
+}
+
+.navUl{
+    list-style: none;
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    width: 280px;
+    margin: 0 20px;
+}
+
+.navUl.logged{
+    width: 350px;
+}
+
+.navBar ul a{
+    text-decoration: none;
+    color: var(--color);
+    margin-top: 10px;
+}
+
+.mdMenu{
+    margin: 0 20px;
+}
+
+.mdClose{
+    color: var(--color);
+    display: none;
+    margin: 0 20px;
+}
+
+.userIcon{
+    font-size: 28px;
+    margin-right: 4px;  
+}
+
+.login{
+    color: var(--white);
+    background-color: var(--color);
+    padding: 4px 15px;
+    margin-top: -5px;
+    border-radius: 22px;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.dropbtn {
+    color: var(--white);
+    background-color: var(--color);
+    padding: 3px 15px;
+    margin-top: -10px;
+    border-radius: 22px;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+  }
+  
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {background-color: #f1f1f1}
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+
+
+@media only screen and (max-width: 800px){
+    .navItems{
+        display: none;
+    }
+    .navBar{
+        justify-content: none;
+    }
+
+}
+
+
+@media only screen and (min-width: 800px){
+    .hamburgerMenu{
+        display: none;
+    } 
+    .minimizedMenu{
+        display: none;
+    }
+}
+
+.minimizedMenu{
+    width: 100vw;
+    background-color: var(--white);
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.minNavItems ul{
+    list-style: none;
+    font-weight: 500;
+    font-size:x-large ;
+}
+
+.minNavItems li{
+    margin: 30px;
+    text-align: center;
+}
+
+.minNavItems li a{
+    text-decoration: none;
+    color: var(--color);
+}
+
