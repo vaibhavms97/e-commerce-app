@@ -17,6 +17,7 @@ class Login extends Component {
         }
     }
     componentDidMount() {
+        console.log(process.env.PORT);
         Axios.get('http://localhost:4000/login')
             .then(response => {
                 this.setState({ logindetails: response.data });

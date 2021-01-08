@@ -67,4 +67,4 @@ app.post('/postProducts',(req,res) =>{
     console.log(req.body)
 })
 
-app.listen(PORT, () => console.log('Your port is listening at 4000'))
+app.listen(PORT, () => console.log('Your port is listening at '+PORT))
