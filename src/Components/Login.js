@@ -17,7 +17,6 @@ class Login extends Component {
         }
     }
     componentDidMount() {
-        console.log(process.env.PORT);
         Axios.get('http://localhost:4000/login')
             .then(response => {
                 this.setState({ logindetails: response.data });
@@ -27,15 +26,26 @@ class Login extends Component {
     checkLoginDetails() {
         let givenUsername = document.getElementById('username').value;
         let givenPassword = document.getElementById('password').value;
-        for (const value of this.state.logindetails) {
-            if (value.username === givenUsername && value.password === givenPassword) {
-                localStorage.setItem('user_token',value._id)
+        let details = this.state.logindetails
+        for (const value in details) {
+            if (details[value].username === givenUsername && details[value].password === givenPassword) {
+                localStorage.setItem('user_token',value)
+                localStorage.setItem('username',details[value].username)
                 this.props.dispatch({
                     type:'displayComponent',
                     componentName:'home'
                 })
-                this.props.history.push('/')
+                // this.props.history.push('/')
             }
+            else if(value.username === givenUsername && value.password !== givenPassword){
+                this.setState({error: 'Incorrect Password'})
+            }
+        }
+    }
+
+    changeValue(e){
+        if(e.keyCode === 13){
+            this.checkLoginDetails();
         }
     }
 
@@ -45,7 +55,7 @@ class Login extends Component {
             type:'displayComponent',
             componentName:'home'
         })
-        this.props.history.push('/')
+        // this.props.history.push('/')
     }
 
     register() {
@@ -71,7 +81,7 @@ class Login extends Component {
                             <label className='label password'>Password:</label>
                         </div>
                         <div className='inputdiv'>
-                            <input className='input ' type='password' placeholder='Enter password' id='password'></input>
+                            <input className='input ' type='password' placeholder='Enter password' id='password' onKeyUp={this.changeValue.bind(this)}></input>
                         </div>
                         <div className='row login'>
                             <button id='button' className='btn' onClick={this.checkLoginDetails.bind(this)}>Login</button>

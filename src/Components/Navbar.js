@@ -30,21 +30,17 @@ class Navbar extends Component {
             .then(response => {
                 this.setState({ logindetails: response.data },
                     () => {
-                        let isLoggedIn = localStorage.getItem('user_token');
-                        for (const value of this.state.logindetails) {
-                            if (value._id === isLoggedIn) {
-                                this.setState({ userName: value.username })
-                                document.querySelector('.navUl').classList.toggle('logged')
-                            }
-                        }
+                        let isLoggedIn = localStorage.getItem('username');
                         if (isLoggedIn) {
+                            this.setState({ userName: isLoggedIn })
+                            document.querySelector('.navUl').classList.toggle('logged')
                             this.props.dispatch({
                                 type: 'isLogged',
                                 value:true
                             })
                             this.props.dispatch({
                                 type: 'userId',
-                                userId: isLoggedIn
+                                userId: localStorage.getItem('user_token')
                             })
                         }
                     });
@@ -92,11 +88,12 @@ class Navbar extends Component {
         })
         document.querySelector('.navUl').classList.toggle('logged')
         localStorage.clear()
+        this.props.history.push('/home')
         window.location = '/'
     }
 
     handleHomeComponent(){
-        window.location = '/home'
+        window.location = '/'
     }
 
     handleSearch(){
@@ -124,8 +121,8 @@ class Navbar extends Component {
                                     <div class="dropdown">
                                         <button class="dropbtn"><BiUserCircle className='userIcon'/>{ this.state.userName}</button>
                                         <div class="dropdown-content">
-                                            <a href="#">Profile</a>
-                                            <a href='#' onClick={this.handleLogout.bind(this)}>Logout</a>
+                                            <a href='/'>Profile</a>
+                                            <a onClick={this.handleLogout.bind(this)} href='/'>Logout</a>
                                         </div>
                                     </div>
                                 </li> :

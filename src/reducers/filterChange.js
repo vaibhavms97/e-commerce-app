@@ -1,7 +1,3 @@
-const initialState = {
-    filterChange: false
-}
-
 const filterChangeReducer = (state= [],action) => {
     console.log(action)
     switch(action.type){

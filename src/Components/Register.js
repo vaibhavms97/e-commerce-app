@@ -30,13 +30,13 @@ class Register extends Component {
         let givenPassword = document.getElementById('pass').value;
         let ConfirmPassword = document.getElementById('confirmPassword').value;
         let valid = true
-        for (const value of this.state.loginDetails) {
+        Object.values(this.state.loginDetails).map(value => {
             if (value.username === givenUsername) {
                 valid = false
-                this.setState({ error: 'User already exists' })
-                break;
+                return this.setState({ error: 'User already exists' })
             }
-        }
+            return 0;
+        })
         if (givenPassword !== ConfirmPassword) {
             this.setState({ error: 'Passwords does not matched' })
             valid = false;
@@ -48,7 +48,9 @@ class Register extends Component {
             }
             Axios.post('http://localhost:4000/postLoginDetails', logindetails)
                 .then(response => {
-                    localStorage.setItem('user_token',response.data.userValues.insertedId);
+                    console.log(response)
+                    localStorage.setItem('user_token',response.data.key);
+                    localStorage.setItem('username',givenUsername)
                     console.log(response.data);
                     this.props.dispatch({
                         type:'displayComponent',
@@ -69,6 +71,13 @@ class Register extends Component {
         })
         window.location = '/home'
     }
+
+    changeValue(e){
+        if(e.keyCode === 13){
+            this.register();
+        }
+    }
+
     render() {
         return (
             <div className='registerPage'>
@@ -95,7 +104,7 @@ class Register extends Component {
                             <label className='label confirmPassword'>Confirm Password:</label>
                         </div>
                         <div className='inputdiv confirmPasswordinp'>
-                            <input className='input ' type='password' placeholder='Confirm password' id='confirmPassword'></input>
+                            <input className='input ' type='password' placeholder='Confirm password' id='confirmPassword' onKeyUp={this.changeValue.bind(this)}></input>
                         </div>
                         <div className='row login'>
                             <button id='button' className='btn' onClick={this.register.bind(this)}>Register</button>

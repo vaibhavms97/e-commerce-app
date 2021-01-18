@@ -10,6 +10,8 @@ import { FiCheckCircle } from 'react-icons/fi';
 import Login from './Login';
 import { VscChromeClose } from 'react-icons/vsc'
 import Pagination from './Pagination';
+import ProgressBar from './ProgressBar';
+
 
 class Home extends Component {
     constructor() {
@@ -29,7 +31,8 @@ class Home extends Component {
             filteredBrands: [],
             filteredCategories: [],
             uniqueBrands: [],
-            uniqueCategories: []
+            uniqueCategories: [],
+            isDisplayProgressBar: false
         }
         this.handleCart = this.handleCart.bind(this);
         this.addFilters = this.addFilters.bind(this);
@@ -37,16 +40,20 @@ class Home extends Component {
 
 
     componentDidMount() {
+        this.setState({isDisplayProgressBar : true})
         Axios.get('http://localhost:4000/products')
             .then(response => {
-                this.setState({ products: response.data },
+                sessionStorage.setItem('products',response.data)
+                this.setState({ products: response.data, isDisplayProgressBar: false },
                     () => {
+                        console.log(this.state.products)
                         let isLoggedIn = localStorage.getItem('user_token');
                         if (isLoggedIn) {
                             Axios.get('http://localhost:4000/getUser?userId=' + isLoggedIn)
                                 .then(response => {
-                                    if (response.data[0].cart !== undefined && response.data[0].cart.length !== 0) {
-                                        this.setState({ cartItems: response.data[0].cart },
+                                    console.log(response.data['cart'])
+                                    if (response.data['cart'] !== undefined) {
+                                        this.setState({ cartItems: response.data.cart },
                                         () => {
                                             this.state.cartItems.map(product => {
                                                 this.state.products.map((pro,index) => {
@@ -56,7 +63,9 @@ class Home extends Component {
                                                         editProduct.splice(index,1,pro)                                        
                                                         this.setState({ products: editProduct })
                                                     }
+                                                    return 0;
                                                 })
+                                                return 0;
                                             })
                                         })
                                     }
@@ -128,7 +137,8 @@ class Home extends Component {
                 brand: this.state.brand,
                 category: this.state.category,
                 rating: this.state.rating,
-                name: name
+                name: name,
+                description: description
             }
         } else {
             filters = {
@@ -137,13 +147,13 @@ class Home extends Component {
                 rating: this.state.rating
             }
         }
-        console.log(filters)
         const filterKeys = Object.keys(filters);
         return products.filter(product => {
             return filterKeys.every(key => {
                 if (!filters[key].length) return true;
                 if (key === 'rating') return filters[key].find(filter => product[key] >= filter)
                 if (key === 'name') return filters[key].find(filter => product[key].toLowerCase().includes(filter.toLowerCase()))
+                if (key === 'description') return filters[key].find(filter => product[key].toLowerCase().includes(filter.toLowerCase()))
                 else return filters[key].find(filter => filter.includes(product[key]))
             })
         })
@@ -267,7 +277,9 @@ class Home extends Component {
                         </div>
                     </div>
                 </div>
-
+                { this.state.isDisplayProgressBar === true && 
+                    <ProgressBar />
+                }
                 <div >
                     <div className='products'>
                         {shownProducts.map((product, index) =>

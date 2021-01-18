@@ -1,0 +1,25 @@
+.progressBar{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    position: fixed;
+}
+
+.progressBarOuter{
+    width: 50px;
+    height: 50px;
+    border-top: 5px solid #FB7B09;
+    border-left: 5px solid #FB7B09;
+    border-bottom: 5px solid #FB7B09;
+    border-right: 5px solid transparent;
+    border-radius: 50%;
+    animation:spin 1s linear infinite;
+}
+
+
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
